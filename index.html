@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h2>Expense Tracker</h2>
+      </div>
+
+      <form id="expense">
+        <input
+          type="text"
+          id="description"
+          placeholder="Expense Description"
+          required />
+        <br />
+
+        <select id="category" required> <!-- Removed the extra space -->
+          <option value="">Select Category</option> <!-- Ensure it's not selected by default -->
+          <option value="Food Item">Food Item</option>
+          <option value="Utility">Utility</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Others">Others</option>
+        </select>
+        <br />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <br />
+        <input type="submit" value="Add Expense" />
+      </form>
+
+      <h3>Expense Summary</h3>
+      <table id="expenseTable">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody id="expenseList">
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
